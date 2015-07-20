@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "NETWebTwain";
+}
+
+<h2>NETWebTwain</h2>
+
+<script>
+    function runApp()
+    {
+    var shell = new ActiveXObject("WScript.shell");
+    shell.run("c:\\twain\\twain.exe", 1, true);
+    }
+</script>
+
+<input type="button" value="Scan" onclick="javascript:window.open('file:///C:/twain/Twain.exe',1);" />
+<input type="button" name="button1" value="Scan XP sp2 users" onclick="runApp()" />
+
+
+In Internet Explorer, click on Tools -> Internet Options -> Security Tab and then under "Security level for this zone" click Custom Level... Locate the "ActiveX controls and plug-ins" section and then set "Initalize and script ActiveX controls not marked as safe for scripting" to "Prompt" which will force IE to prompt you for approval when an ActiveX control that is not marked as safe (such as WScript) attempts to be called.
