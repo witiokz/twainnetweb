@@ -1,0 +1,12 @@
+return to canvas
+upload to server
+
+
+standalone application (click once)
+- run on startup
+
+windows service version
+
+
+'ws://localhost:8991/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED
+'ws://localhost:18618/' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED

@@ -53,12 +53,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\TwainScanner\TwainScanner.csproj">
-      <Project>{e8237f4a-8cfe-4298-8ba5-e44a72eac8f3}</Project>
-      <Name>TwainScanner</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

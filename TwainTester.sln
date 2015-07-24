@@ -1,15 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwainTester", "TwainTester\TwainTester.csproj", "{331C4525-A35C-4874-B03E-BF4FBACF4A9D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwainScanner", "TwainScanner\TwainScanner.csproj", "{E8237F4A-8CFE-4298-8BA5-E44A72EAC8F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServer", "WebServer\WebServer.csproj", "{FA15C94F-3291-411A-BD3E-92093EA7A206}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalrWebServer", "SignalrWebServer\SignalrWebServer.csproj", "{D40A2225-6A93-4F51-8E7D-CF95B7B96B05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwainNetWebServer", "TwainNetWebServer\TwainNetWebServer.csproj", "{4018537F-FCBC-4D47-BF3B-DC236F5ADCD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +21,6 @@ Global
 		{331C4525-A35C-4874-B03E-BF4FBACF4A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{331C4525-A35C-4874-B03E-BF4FBACF4A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{331C4525-A35C-4874-B03E-BF4FBACF4A9D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E8237F4A-8CFE-4298-8BA5-E44A72EAC8F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E8237F4A-8CFE-4298-8BA5-E44A72EAC8F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E8237F4A-8CFE-4298-8BA5-E44A72EAC8F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E8237F4A-8CFE-4298-8BA5-E44A72EAC8F3}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA15C94F-3291-411A-BD3E-92093EA7A206}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA15C94F-3291-411A-BD3E-92093EA7A206}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA15C94F-3291-411A-BD3E-92093EA7A206}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{D40A2225-6A93-4F51-8E7D-CF95B7B96B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D40A2225-6A93-4F51-8E7D-CF95B7B96B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D40A2225-6A93-4F51-8E7D-CF95B7B96B05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4018537F-FCBC-4D47-BF3B-DC236F5ADCD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4018537F-FCBC-4D47-BF3B-DC236F5ADCD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4018537F-FCBC-4D47-BF3B-DC236F5ADCD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4018537F-FCBC-4D47-BF3B-DC236F5ADCD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

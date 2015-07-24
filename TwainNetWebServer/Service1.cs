@@ -1,22 +1,31 @@
 ﻿using Microsoft.AspNet.SignalR;
-using Microsoft.Owin.Cors;
 using Microsoft.Owin.Hosting;
 using NTwain;
 using NTwain.Data;
-using Owin;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.ServiceProcess;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SignalrWebServer
+namespace TwainNetWebServer
 {
-    class Program
+    public partial class Service1 : ServiceBase
     {
+        public Service1()
+        {
+            InitializeComponent();
+        }
+
+        private System.Diagnostics.EventLog eventLog1;
+
         static readonly TwainSession twain = InitTwain();
 
         private static TwainSession InitTwain()
@@ -36,22 +45,34 @@ namespace SignalrWebServer
             return twain;
         }
 
-        static void Main(string[] args)
-        {
-            string url = "http://localhost:8080";
 
-            using (WebApp.Start(url))
+
+        protected override void OnStart(string[] args)
+        {
+            eventLog1 = new System.Diagnostics.EventLog();
+
+            if (!System.Diagnostics.EventLog.SourceExists(Utility.Name))
             {
-                Console.WriteLine("Server running on {0}", url);
-                Console.ReadLine();
+                System.Diagnostics.EventLog.CreateEventSource(
+                    Utility.Name, "Application");
             }
+
+            eventLog1.Source = Utility.Name;
+            eventLog1.Log = "Application";
+
+            eventLog1.WriteEntry("In OnStart");
+            string url = "http://localhost:8080";
+            WebApp.Start(url);
+
         }
 
-
+        protected override void OnStop()
+        {
+            eventLog1.WriteEntry("In OnStop");
+        }
 
         public class MyHub : Hub
         {
-            
             public void GetList(string id)
             {
                 var rc = twain.Open();
